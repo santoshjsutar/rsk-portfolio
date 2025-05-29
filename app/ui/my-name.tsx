@@ -14,19 +14,9 @@ export default function MyName() {
   const [onHover, setOnHover] = useState(false)
   return (
     // mt-[1190px] 
-    <main className={`${neulisSansBlack.className} px-[45px] flex items-start flex-col text-[295.5px] text-[#FFFFFF] uppercase leading-none`}>
+    <main className={`${neulisSansBlack.className} px-[45px] flex items-start flex-col lg:text-[260px]	xl:text-[295.5px] text-[#FFFFFF] uppercase leading-none`}>
       <span className="w-full flex flex-row items-center">
         <span className="leading-none">ro</span>
-        {/* <Image
-          src="/assets/color-me.png"
-          alt="myname"
-          width={600}
-          height={600}
-          quality={100}
-          style={{
-            borderRadius: '10px'
-          }}
-        /> */}
         {onHover ? <Image
           src="/assets/black-me.png"
           alt="myname-hover"
