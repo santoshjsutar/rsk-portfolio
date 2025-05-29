@@ -1,28 +1,14 @@
 import Image from "next/image";
 import Header from "./ui/header";
 import MyName from "./ui/my-name";
+import MyDescription from './ui/my-description';
 
 export default function Home() {
   return (
-    <div className="bg-[#000000] h-[100%] w-screen">
+    <div className="bg-[#000000] h-[100%] w-screen px-[50px]">
       <Header />
       <MyName />
-      {/* paragraph here */}
-
-      <div className="mt-[110px] px-[45px]ext-[35.75px] tracking-[0%] text-[#FFFFFF] font-bold leading-[normal]">
-        <span>I’m a passionate designer with an expertise in creating unique and effective </span>
-        <span className="text-[#FF2C52] ">
-          Brand Identities.</span> <br />
-        <span>
-          Alongside this, I have strong skills in </span>
-        <span className="font-bold">
-          UI/UX Design </span>
-        <span> and </span>
-        <span className="font-bold">
-          Packaging Design, </span>
-        <span> ensuring well-rounded, </span> <br />
-        <span> creative solutions. My focus is on delivering designs that resonate with audiences and elevate brands. </span>
-      </div>
+      <MyDescription />
       <div className=" flex items-center mt-[55px] px-[45px]">
         <Image
           src="./assets/right-arrow.svg"
