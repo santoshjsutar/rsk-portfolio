@@ -4,169 +4,60 @@ import MyName from "./ui/my-name";
 import MyDescription from "./ui/my-description";
 import LearnMoreLabel from "./ui/learn-more-label";
 import WorkLabel from "./ui/work-label";
+import WorkCard from "./ui/work-card";
 
+const SELECTED_WORKS = [
+  {
+    name: "ayuran",
+    color: "#FF57E0",
+    description: "Merging modern luxury with ancient Indian tradition",
+    skills: ["Personal", "Brand Identity", "Brand Strategy"],
+  },
+  {
+    name: "playdale",
+    color: "#2DE6B4",
+    description:
+      "A creative celebration designed to promote connection and engagement",
+    skills: ["Public", "Brand Identity", "Brand Strategy", "Calderdale"],
+  },
+  {
+    name: "quanwave",
+    color: "#9C85FF",
+    description:
+      "Pioneering powerful quantum computing and AI solutions with strategic integration",
+    skills: ["Technology", "Brand Identity", "Digital", "AI"],
+  },
+];
 export default function Home() {
   return (
     <div className="bg-[#000000] h-[100%] w-screen px-[45px]">
       <Header />
-      <MyName />
-      <MyDescription />
-      <LearnMoreLabel />
-      <WorkLabel image="green-dot" label="Selected Work" />
-      <div className=" mt-[165px] text-[#FFFFFF] text-[31.82px] font-bold">
-        Ayuran{" "}
+      <div className="mt-[1190px]">
+        <MyName />
       </div>
-
-      <div className="mt-[13.75px] text-[#FFFFFF] text-[22.35px] font-light">
-        Merging Modern Luxury with Ancient Indian <br />
-        Tradition{" "}
+      <div className="mt-[110px]">
+        <MyDescription />
       </div>
-
-      <div className="mt-[13.75px]">
-        <span className="text-[#CBD72B] text-[19.86px] font-light">
-          {" "}
-          Personal Care{" "}
-        </span>
-        <span className="flex items-center px-[20px]">
-          <Image
-            src="./assets/outline-circle.svg"
-            alt="hhhh"
-            width={13}
-            height={13}
-          ></Image>
-        </span>
-        <span className="text-[#FFFFFF] text-[19.86px] font-light">
-          {" "}
-          Brand Identity{" "}
-        </span>
-        <span className="flex items-center px-[20px]">
-          <Image
-            src="./assets/outline-circle.svg"
-            alt="hhhh"
-            width={13}
-            height={13}
-          ></Image>
-        </span>
-        <span className="text-[#FFFFFF] text-[19.86px] font-light">
-          {" "}
-          Brand Strategy{" "}
-        </span>
+      <div className="mt-[55px]">
+        <LearnMoreLabel />
       </div>
-
-      <div className=" mt-[165px] text-[#FFFFFF] text-[31.82px] font-bold">
-        Playdale{" "}
+      <div className="mt-[220px]">
+        <WorkLabel image="green-dot" label="Selected Work" />
       </div>
-
-      <div className="mt-[13.75px] text-[#FFFFFF] text-[22.35px] font-light">
-        Merging Modern Luxury with Ancient Indian <br />
-        Tradition{" "}
+      <div className="mt-[85px] flex gap-[50px]">
+        {SELECTED_WORKS.map((work, id) => (
+          <WorkCard
+            key={`WORK_${work.name}_${id}`}
+            label={work.name}
+            description={work.description}
+            legendColor={work.color}
+            image={work.name}
+            skills={work.skills}
+          />
+        ))}
       </div>
-
-      <div className="mt-[13.75px]">
-        <span className="text-[#2DE6B4] text-[19.86px] font-light">
-          {" "}
-          Public{" "}
-        </span>
-        <span className="flex items-center px-[20px]">
-          <Image
-            src="./assets/outline-circle.svg"
-            alt="hhhh"
-            width={13}
-            height={13}
-          ></Image>
-        </span>
-        <span className="text-[#FFFFFF] text-[19.86px] font-light">
-          {" "}
-          Brand Identity{" "}
-        </span>
-        <span className="flex items-center px-[20px]">
-          <Image
-            src="./assets/outline-circle.svg"
-            alt="hhhh"
-            width={13}
-            height={13}
-          ></Image>
-        </span>
-        <span className="text-[#FFFFFF] text-[19.86px] font-light">
-          {" "}
-          Brand Strategy{" "}
-        </span>
-
-        <span className="flex items-center px-[20px]">
-          <Image
-            src="./assets/outline-circle.svg"
-            alt="hhhh"
-            width={13}
-            height={13}
-          ></Image>
-        </span>
-        <span className="text-[#FFFFFF] text-[19.86px] font-light">
-          {" "}
-          Playful{" "}
-        </span>
-      </div>
-
-      <div className=" mt-[165px] text-[#FFFFFF] text-[31.82px] font-bold">
-        Quanwave{" "}
-      </div>
-
-      <div className="mt-[13.75px] text-[#FFFFFF] text-[22.35px] font-light">
-        Merging Modern Luxury with Ancient Indian <br />
-        Tradition{" "}
-      </div>
-
-      <div className="mt-[13.75px]">
-        <span className="text-[#9C85FF] text-[19.86px] font-light">
-          {" "}
-          Technology{" "}
-        </span>
-        <span className="flex items-center px-[20px]">
-          <Image
-            src="./assets/outline-circle.svg"
-            alt="hhhh"
-            width={13}
-            height={13}
-          ></Image>
-        </span>
-        <span className="text-[#FFFFFF] text-[19.86px] font-light">
-          {" "}
-          Brand Identity{" "}
-        </span>
-        <span className="flex items-center px-[20px]">
-          <Image
-            src="./assets/outline-circle.svg"
-            alt="hhhh"
-            width={13}
-            height={13}
-          ></Image>
-        </span>
-        <span className="text-[#FFFFFF] text-[19.86px] font-light">
-          {" "}
-          Brand Strategy{" "}
-        </span>
-
-        <span className="flex items-center px-[20px]">
-          <Image
-            src="./assets/outline-circle.svg"
-            alt="hhhh"
-            width={13}
-            height={13}
-          ></Image>
-        </span>
-        <span className="text-[#FFFFFF] text-[19.86px] font-light"> AI </span>
-      </div>
-
-      <div className="flex items-center mt-[110px]">
-        <Image
-          src="./assets/red-circle.svg"
-          alt="hhhh"
-          width={18}
-          height={18}
-        ></Image>
-
-        <span className="px-[14px] text-[#FFFFFF] text-[25.14px] font-bold">
-          CREATIVE SKILLS AND EXPERTISE{" "}
-        </span>
+      <div className="mt-[162px]">
+        <WorkLabel image="green-dot" label="Creative skills and expertise" />
       </div>
     </div>
   );

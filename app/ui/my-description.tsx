@@ -2,7 +2,7 @@ import React from "react";
 
 export default function MyDescription() {
   return (
-    <div className="mt-[110px] text-[35.75px] text-[#FFFFFF] leading-none">
+    <div className="text-[35.75px] text-white leading-none">
       I’m a passionate designer with an expertise in creating unique and
       effective
       <span className="text-[#C2FA4F] font-bold">{" "}Brand Identities{" "}</span>
