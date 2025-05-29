@@ -9,7 +9,7 @@ export default function Home() {
       <MyName />
       {/* paragraph here */}
 
-      <div className="mt-[110px] px-[45px] font-[Neulis_Sans] font-bold text-[35.75px] leading-[100%] tracking-[0%] text-[#FFFFFF] font-bold leading-[normal]">
+      <div className="mt-[110px] px-[45px]ext-[35.75px] tracking-[0%] text-[#FFFFFF] font-bold leading-[normal]">
         <span>I’m a passionate designer with an expertise in creating unique and effective </span>
         <span className="text-[#FF2C52] ">
           Brand Identities.</span> <br />
