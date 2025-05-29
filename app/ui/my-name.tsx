@@ -14,7 +14,7 @@ export default function MyName() {
   const [onHover, setOnHover] = useState(false)
   return (
     // mt-[1190px] 
-    <main className={`${neulisSansBlack.className} px-[45px] flex items-start flex-col lg:text-[260px]	xl:text-[295.5px] text-[#FFFFFF] uppercase leading-none`}>
+    <main className={`${neulisSansBlack.className} flex items-start flex-col lg:text-[260px] xl:text-[295.5px] text-[#FFFFFF] uppercase leading-none`}>
       <span className="w-full flex flex-row items-center">
         <span className="leading-none">ro</span>
         {onHover ? <Image
