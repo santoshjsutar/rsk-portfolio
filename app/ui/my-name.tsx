@@ -6,9 +6,6 @@ import { useState } from "react";
 const neulisSansBlack = localFont({
   src: '../../public/fonts/NeulisSans/Neulis_Sans_Black.otf',
 });
-// const neulisSansLight = localFont({
-//   src: '../public/fonts/NeulisSans/Neulis_Sans_Light.otf',
-// });
 
 export default function MyName() {
   const [onHover, setOnHover] = useState(false)

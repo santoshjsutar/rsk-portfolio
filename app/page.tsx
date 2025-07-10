@@ -5,6 +5,8 @@ import MyDescription from "./ui/my-description";
 import LearnMoreLabel from "./ui/learn-more-label";
 import WorkLabel from "./ui/work-label";
 import WorkCard from "./ui/work-card";
+import MySpecialization from "./ui/my-specialization";
+import MyKeyRole from "./ui/my-key-role";
 
 const SELECTED_WORKS = [
   {
@@ -28,11 +30,63 @@ const SELECTED_WORKS = [
     skills: ["Technology", "Brand Identity", "Digital", "AI"],
   },
 ];
+
+const MY_KEY_ROLES = [
+  {
+    width: 9,
+    romanNumber: "roman-one",
+    role: "Brand Identity",
+    keyItems: [
+      "Market Research",
+      "Brand Strategy",
+      "Logo Design",
+      "Brand Guidelines",
+      "Collateral Design",
+    ],
+  },
+  {
+    width: 9 + 9 + 5,
+    romanNumber: "roman-two",
+    role: "UI/UX Design",
+    keyItems: [
+      "User Research",
+      "User Flows",
+      "Wireframing",
+      "Interface Design",
+      "Prototyping",
+    ],
+  },
+  {
+    width: 9 + 5 + 9 + 5 + 9,
+    romanNumber: "roman-three",
+    role: "Packaging Design",
+    keyItems: [
+      "Market Research",
+      "Material Research",
+      "Designing on Die-Lines",
+      "3D Mockups",
+      "Collateral Design",
+    ],
+  },
+  {
+    width: 9 + 5 + 9 + 5 + 9,
+    romanNumber: "roman-four",
+    role: "3D Design",
+    keyItems: [
+      "Basic 3D Modellling",
+      "Texturing",
+      "Materials",
+      "Lighting",
+      "Rendering",
+    ],
+  },
+];
 export default function Home() {
   return (
     <div className="bg-[#000000] h-[100%] w-screen px-[45px]">
       <Header />
-      <div className="mt-[1190px]">
+      {/* <div className="mt-[1190px]"> */}
+      <div className="">
         <MyName />
       </div>
       <div className="mt-[110px]">
@@ -58,6 +112,22 @@ export default function Home() {
       </div>
       <div className="mt-[162px]">
         <WorkLabel image="green-dot" label="Creative skills and expertise" />
+      </div>
+      <div className="mt-[85px] grid grid-flow-row-dense grid-cols-5">
+        <div className="col-span-2">
+          <MySpecialization />
+        </div>
+        <div className="col-span-3 grid grid-cols-2 gap-[110px] px-[100px]">
+          {MY_KEY_ROLES.map((keyRole, id) => (
+            <MyKeyRole
+              width={keyRole.width}
+              key={`KEY_ROLE_${keyRole.role}_${id}`}
+              romanNumber={keyRole.romanNumber}
+              roleName={keyRole.role}
+              keyRoles={keyRole.keyItems}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );
